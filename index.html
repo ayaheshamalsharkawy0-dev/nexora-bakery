@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORA Bakery | Artisanal Pastries & Sweets</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#home" class="logo">NEXORA <span>Bakery</span></a>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">Craft</a>
+            </nav>
+            <button class="cart-btn" id="open-cart">
+                Bag (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="subtitle">Small-Batch Oven & Patisserie</span>
+                <h1>Warm bakes, tender crumb, and sweet moments daily.</h1>
+                <p>Flaky pastries, layered cakes, soft-baked cookies, and comforting treats made to brighten slow mornings and cozy evenings.</p>
+                <div class="hero-actions">
+                    <a href="#menu" class="btn-primary">Explore Menu</a>
+                    <a href="#about" class="btn-secondary">Our Craft</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="images/hero.jpg" alt="NEXORA Bakery fresh pastries and sweets">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="products-section" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Fresh From The Oven</span>
+                <h2>The Bakery Selection</h2>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="pastries">Pastries</button>
+                    <button class="filter-btn" data-category="cakes">Cakes</button>
+                    <button class="filter-btn" data-category="cookies">Cookies</button>
+                    <button class="filter-btn" data-category="sweets">Sweets</button>
+                </div>
+            </div>
+
+            <div class="products-grid" id="products-grid">
+                <!-- Products injected dynamically via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Craft Section -->
+    <section class="about-section" id="about">
+        <div class="container about-content">
+            <span class="subtitle">NEXORA Bakery Craft</span>
+            <h2>Baked With Patience & Care</h2>
+            <p>Great baking comes down to honest ingredients, balanced sweetness, and unhurried craft. Every batch is designed to feel warm, familiar, and memorable.</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>Rich Butter & Flour</h4>
+                    <p>Carefully selected base ingredients for golden crusts and tender textures.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Balanced Sweetness</h4>
+                    <p>Thoughtful flavor pairings where chocolate, spice, and fruit shine naturally.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Daily Freshness</h4>
+                    <p>Crafted in small batches so every bite feels comforting and freshly made.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>NEXORA <span>Bakery</span></h3>
+                <p>Part of the NEXORA lifestyle ecosystem.</p>
+            </div>
+            <p class="copyright">&copy; 2026 NEXORA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Slide-Out Bag -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Bag</h3>
+            <button class="close-cart" id="close-cart" aria-label="Close bag">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-msg">Your bag is currently empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="btn-primary checkout-btn" id="checkout-btn">Checkout</button>
+        </div>
+    </aside>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">Added to bag</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
